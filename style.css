@@ -1,0 +1,108 @@
+:root {
+    --text-color: #212121;
+    --primary-color: #dc2f02;
+    --secondary-color: #e85d04;
+    --dark-orange-color: #9d0208;
+    --gray-color: #e9ecef;
+    --light-gray-color: #ced4da;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f8f9fa;
+}
+
+#navbar {
+    background: var(--gray-color);
+}
+
+#navbar ul {
+    list-style: none;
+}
+
+#navbar ul li {
+    color: var(--text-color);
+    display: inline-block;
+    position: relative;
+    padding: 1rem;
+}
+
+#navbar ul li ul {
+    display: none;
+}
+
+#navbar ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+}
+
+#navbar ul li:hover {
+    cursor: pointer;
+    background: var(--secondary-color);
+    color: #fff;
+}
+
+#navbar ul li:hover a {
+    color: #fff;
+}
+
+#navbar ul li:hover ul {
+    display: block;
+    position: absolute;
+    background: var(--gray-color);
+    width: 200px;
+    left: 0;
+    margin-top: 1rem;
+}
+
+#navbar ul li:hover li {
+    background: var(--gray-color);
+    width: 100%;
+}
+
+#navbar ul li:hover ul li:hover {
+    background: var(--light-gray-color);
+    width: 100%;
+}
+
+#navbar ul li:hover ul a {
+    color: var(--text-color);
+    width: 100%;
+}
+
+#navbar ul li:hover span {
+    color: #fff;
+    float: right;
+    padding: 0.2rem 0.5rem;
+    background: var(--primary-color);
+    text-align: center;
+    border-radius: 10px;
+    font-size: 0.8rem;
+}
+
+#navbar ul li:hover ul li:hover span {
+    background: var(--dark-orange-color);
+}
+
+
+#showcase {
+    background: url('./img/showcase.jpg') no-repeat center center/cover;
+    height: 300px;
+}
+
+@media(max-width: 650px) {
+    #navbar ul li {
+        display: block;
+    }
+
+    #navbar ul li:hover ul {
+        width: 100%;
+        position: inherit;
+    }
+}
